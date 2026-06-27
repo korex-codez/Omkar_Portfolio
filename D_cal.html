@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+            background-color: #5f9ea0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 28px;
+        }
+
+        .cc {
+            background-color: #ffffff;
+            border-radius: 7px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            height: 410px;
+            width: 380px;
+            margin-top: 120px;
+        }
+
+        input {
+            width: 140px;
+            height: 28px;
+        }
+
+        .ig {
+            margin: 20px;
+        }
+
+        button {
+            color: #ffffff;
+            background-color: #007fff;
+            width: 300px;
+            height: 35px;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: o0x;
+            border-radius: 4px;
+        }
+
+        #b2{
+            background-color: #00ff95d0;
+        }
+
+        h4 {
+            margin-top: -7px;
+            color: #808080;
+        }
+
+        table{
+            width: 360px;
+        }
+
+        #s{
+            margin-top: 13px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="cc">
+        <br>
+        <h1>Discount Calculator</h1>
+        <!--<div class="ig">
+            <label for=""><b>Enter bill amount:</b></label><br /><br>
+            <input type="number" name="" id="a" value="" />
+        </div>
+        <div class="ig">
+            <label for=""><b>Select discount %</b></label><br /><br>
+            <input type="number" name="" id="d" value="" />
+        </div>-->
+        <table align="center" cellspacing="25">
+            <tr>
+                <td><label for=""><b>Enter bill amount:</b></label></td>
+                <td><input type="number" name="" id="a" value="" /></td>
+            </tr>
+            <tr>
+                <td><label for=""><b>Select discount %</b></label></td>
+                <td><input type="number" name="" id="d" value="" /></td>
+            </tr>
+        </table>
+        <button onclick="cal_si()"><b>Calculate</b></button>
+        <button onclick="re()" id="b2"><b>Reset</b></button>
+        <p id="result"></p>
+        <h4 id="s"></h4>
+
+    </div>
+    <script>
+        function re()
+        {
+            a.value=""
+            d.value=""
+            var re=""
+            document.getElementById("s").innerHTML = re
+            return false;
+        }
+        function cal_si() {
+            var a = document.getElementById("a").value
+            var d = document.getElementById("d").value
+            var da = a*(d/100)
+            var fa = parseFloat(a) - parseFloat(da)
+            var res = "<h3><b>Discount amount: "+da+"<br>Final amount: "+fa+"<b></h3>"
+            document.getElementById("s").innerHTML = res
+            return false;
+        }
+    </script>
+</body>
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 28px;
+        }
+
+        td,button{
+            width: 100%;
+        }
+
+        .cc {
+            background-color: #ffffff;
+            border-radius: 7px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            height: 485px;
+            width: 420px;
+            margin-top: 100px;
+        }
+
+        table{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cc">
+        <h1>Discount Calculator</h1>
+        <table>
+            <tr>
+                <td><label for=""><b>Enter bill amount:</b></label></td>
+                <td><input type="number" name="" id=""></td>
+            </tr>
+            <tr>
+                <td><label for=""><b>Select discount %</b></label></td>
+                <td><input type="number" name="" id=""></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="cal_si()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="reset"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+-->
