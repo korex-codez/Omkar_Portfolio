@@ -375,6 +375,8 @@
     }
     .social-icons a:hover i { color: #fff; }
 
+    
+
     /* sections */
     .section-space { padding: 80px 0; position: relative; z-index: 2; width: 100%; }
     .section-title {
@@ -1241,6 +1243,275 @@
 [data-theme="light"] .profile-wrapper::after {
   background: radial-gradient(circle at 40% 40%, #e8e0ff, #d0c8f0 80%, #b8b0d0);
 }
+
+         /* ===== MOBILE: Increased Spacing, Bigger Profile, Same Ratio, Neat Alignment ===== */
+    
+    @media (max-width: 768px) {
+      .hero {
+        min-height: auto !important;
+        padding: 120px 0 30px !important; /* 🔥 Increased top padding */
+        overflow: hidden !important;
+      }
+      
+      .hero .container {
+        overflow: hidden !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      
+      .hero .row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        overflow: visible !important;
+        gap: 15px !important; /* 🔥 Increased from 5px to 15px */
+      }
+      
+      /* 🔥 Profile picture - BIGGER & MORE TOP SPACE */
+      .hero .row .profile-wrapper {
+        order: -1 !important;
+        width: 280px !important;
+        height: 280px !important; /* 🔥 Same width & height = 1:1 ratio */
+        margin: 80px auto 15px !important; /* 🔥 Increased top margin to 80px, bottom to 15px */
+        overflow: visible !important;
+        flex-shrink: 0 !important;
+        aspect-ratio: 1/1 !important; /* 🔥 Forces perfect 1:1 ratio */
+      }
+      
+      .profile-wrapper .profile-img {
+        width: 85% !important;
+        height: 85% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+      }
+      
+      /* 🔥 Text content - NEATLY ALIGNED */
+      .hero .row .col-lg-7 {
+        order: 1 !important;
+        width: 100% !important;
+        padding: 0 20px !important; /* 🔥 Increased padding */
+        margin-top: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+      
+      /* 🔥 Force center on all children */
+      .hero .row .col-lg-7 * {
+        text-align: center !important;
+      }
+      
+      .hero .subtitle {
+        display: inline-block !important;
+        margin: 0 auto 12px !important; /* 🔥 Increased from 4px to 12px */
+        font-size: 0.85rem !important;
+        letter-spacing: 2px !important;
+        text-align: center !important;
+        width: auto !important;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem !important;
+        margin: 0 auto 15px !important; /* 🔥 Increased from 6px to 15px */
+        text-align: center !important;
+        line-height: 1.2 !important;
+        width: 100% !important;
+      }
+      
+      .hero h1 span {
+        display: inline-block !important;
+      }
+      
+      .hero .bio {
+        margin: 10px auto 18px !important; /* 🔥 Increased margins */
+        max-width: 90% !important;
+        font-size: 1rem !important;
+        line-height: 1.8 !important;
+        text-align: center !important;
+        padding: 0 5px !important;
+      }
+      
+      .hero .highlight {
+        font-size: 0.8rem !important;
+        padding: 6px 18px !important; /* 🔥 Increased padding */
+        margin: 0 !important;
+        text-align: center !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+      }
+      
+      .hero .d-flex.flex-wrap.gap-3 {
+        gap: 12px !important; /* 🔥 Increased from 8px to 12px */
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 12px auto !important; /* 🔥 Increased from 4px to 12px */
+        width: 100% !important;
+        padding: 0 5px !important;
+      }
+      
+      .hero .btn-glow,
+      .hero .btn-outline-soft {
+        padding: 12px 32px !important; /* 🔥 Increased padding */
+        font-size: 1rem !important; /* 🔥 Increased font size */
+        margin: 0 !important;
+        text-align: center !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 140px !important;
+      }
+      
+      .hero .social-icons {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 20px auto 0 !important; /* 🔥 Increased from 12px to 20px */
+        gap: 16px !important; /* 🔥 Increased from 10px to 16px */
+        padding: 0 5px !important;
+        width: 100% !important;
+      }
+      
+      .hero .social-icons a {
+        width: 44px !important; /* 🔥 Increased from 38px to 44px */
+        height: 44px !important;
+        font-size: 1.2rem !important; /* 🔥 Increased from 1rem to 1.2rem */
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero {
+        padding: 100px 0 20px !important; /* 🔥 Increased top padding */
+      }
+      
+      .hero .row .profile-wrapper {
+        width: 240px !important;
+        height: 240px !important; /* 🔥 Same width & height = 1:1 ratio */
+        margin: 70px auto 15px !important; /* 🔥 Increased top margin */
+        aspect-ratio: 1/1 !important;
+      }
+      
+      .profile-wrapper .profile-img {
+        width: 82% !important;
+        height: 82% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+      }
+      
+      .hero .row .col-lg-7 {
+        padding: 0 15px !important;
+      }
+      
+      .hero .subtitle {
+        font-size: 0.8rem !important;
+        margin-bottom: 10px !important;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem !important;
+        margin-bottom: 12px !important;
+      }
+      
+      .hero .bio {
+        font-size: 0.95rem !important;
+        margin: 8px auto 15px !important;
+        max-width: 95% !important;
+        line-height: 1.7 !important;
+      }
+      
+      .hero .highlight {
+        font-size: 0.75rem !important;
+        padding: 5px 14px !important;
+      }
+      
+      .hero .d-flex.flex-wrap.gap-3 {
+        gap: 10px !important;
+        margin: 10px auto !important;
+      }
+      
+      .hero .btn-glow,
+      .hero .btn-outline-soft {
+        padding: 10px 28px !important;
+        font-size: 0.95rem !important;
+        min-width: 130px !important;
+      }
+      
+      .hero .social-icons {
+        margin-top: 18px !important;
+        gap: 14px !important;
+      }
+      
+      .hero .social-icons a {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.1rem !important;
+      }
+      
+      .hero .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+      
+      .hero .row {
+        gap: 12px !important;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      .hero {
+        padding: 80px 0 15px !important;
+      }
+      
+      .hero .row .profile-wrapper {
+        width: 200px !important;
+        height: 200px !important; /* 🔥 Same width & height = 1:1 ratio */
+        margin: 60px auto 12px !important;
+        aspect-ratio: 1/1 !important;
+      }
+      
+      .profile-wrapper .profile-img {
+        width: 80% !important;
+        height: 80% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+      }
+      
+      .hero h1 {
+        font-size: 1.9rem !important;
+      }
+      
+      .hero .bio {
+        font-size: 0.9rem !important;
+        max-width: 100% !important;
+      }
+      
+      .hero .btn-glow,
+      .hero .btn-outline-soft {
+        padding: 8px 24px !important;
+        font-size: 0.9rem !important;
+        min-width: 120px !important;
+      }
+      
+      .hero .highlight {
+        font-size: 0.7rem !important;
+        padding: 4px 12px !important;
+      }
+      
+      .hero .social-icons a {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1284,47 +1555,52 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="row align-items-center gy-5">
-        <div class="col-12 col-lg-7" data-aos="fade-right" data-aos-duration="1000">
-          <div class="subtitle">✦ hello, i'm</div>
-          <h1>Omkar <span>Rajkumar Kore</span></h1>
-          <p class="bio">A Computer Engineering student with a passion for crafting clean, human-centered digital experiences. I blend design thinking with frontend craft.</p>
-          <div class="d-flex flex-wrap gap-3 mb-3">
-            <span class="highlight">⚡ frontend developer</span>
-            <span class="highlight">🎨 ui/ux enthusiast</span>
-          </div>
-          <div class="d-flex flex-wrap gap-3 mt-3">
-            <a href="#projects" class="btn-glow">View work <i class="bi bi-arrow-right-short"></i></a>
-            <a href="#contact" class="btn-outline-soft">Let's connect</a>
-          </div>
-          <div class="social-icons">
-            <a href="https://github.com/korex-codez" data-bs-toggle="tooltip" title="GitHub" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/omkar-kore-77a860419/" data-bs-toggle="tooltip" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.instagram.com/its._.omkar._.18?igsh=ZmFtYndwcWFxbnY=" data-bs-toggle="tooltip" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-          </div>
+<section id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      
+      <!-- LEFT COLUMN: Text Content -->
+      <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+        <div class="subtitle">✦ hello, i'm</div>
+        <h1>Omkar <span>Rajkumar Kore</span></h1>
+        <p class="bio">A Computer Engineering student with a passion for crafting clean, human-centered digital experiences. I blend design thinking with frontend craft.</p>
+        
+        <div class="d-flex flex-wrap gap-3 mb-3">
+          <span class="highlight">⚡ frontend developer</span>
+          <span class="highlight">🎨 ui/ux enthusiast</span>
         </div>
-        <!-- ===== PROFILE PICTURE WITH SPACE HOLE EFFECT ===== -->
-<!-- Place this inside your hero section where you want the profile image to appear -->
-
-<div class="col-12 col-lg-7 profile-wrapper" data-aos="fade-right" data-aos-duration="1000">
-  <!-- Twinkling stars (decorative) -->
-  <span class="star"></span>
-  <span class="star"></span>
-  <span class="star"></span>
-  <span class="star"></span>
-  <span class="star"></span>
-  <span class="star"></span>
-  <span class="star"></span>
-  <span class="star"></span>
-  
-  <!-- Your profile image - CHANGE THE SRC TO YOUR IMAGE PATH -->
-  <img src="img/ok.png" alt="Omkar" class="profile-img" />
-</div>
+        
+        <div class="d-flex flex-wrap gap-3 mt-3">
+          <a href="#projects" class="btn-glow">View work <i class="bi bi-arrow-right-short"></i></a>
+          <a href="#contact" class="btn-outline-soft">Let's connect</a>
+        </div>
+        
+        <div class="social-icons">
+          <a href="https://github.com/korex-codez" data-bs-toggle="tooltip" title="GitHub" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/omkar-kore-77a860419/" data-bs-toggle="tooltip" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/its._.omkar._.18?igsh=ZmFtYndwcWFxbnY=" data-bs-toggle="tooltip" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
       </div>
+      
+      <!-- RIGHT COLUMN: Profile Picture -->
+      <div class="col-lg-5 profile-wrapper" data-aos="fade-left" data-aos-duration="1000">
+        <!-- Twinkling stars (decorative) -->
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        
+        <!-- Profile image -->
+        <img src="img/ok.png" alt="Omkar Kore" class="profile-img" />
+      </div>
+      
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section-space">
